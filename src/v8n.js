@@ -189,9 +189,9 @@ const availableRules = {
 
   pattern: expected => value => expected.test(value),
 
-  lowercase: () => value => /^([a-z]+\s*)+$/.test(value),
+  lowercase: () => value => value == value.toLowerCase(),
 
-  uppercase: () => value => /^([A-Z]+\s*)+$/.test(value),
+  uppercase: () => value => value == value.toUpperCase(),
 
   vowel: () => value => /^[aeiou]+$/i.test(value),
 
